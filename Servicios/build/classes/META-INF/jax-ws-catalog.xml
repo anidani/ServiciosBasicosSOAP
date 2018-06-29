@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:18666/EmpresaElapas.asmx?WSDL" uri="wsdl/localhost_18666/EmpresaElapas.asmx.wsdl"/>
+    <system systemId="http://localhost:18749/EmpresaCessa.asmx?WSDL" uri="wsdl/localhost_18749/EmpresaCessa.asmx.wsdl"/>
+</catalog>

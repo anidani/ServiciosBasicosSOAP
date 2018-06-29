@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-EmpresaElapas" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmpresaElapas"/>
+        <property name="wsdl-EmpresaElapas" location="xml-resources/web-service-references/EmpresaElapas/wsdl/localhost_18666/EmpresaElapas.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmpresaElapas" destdir="${build.generated.dir}/jax-wsCache/EmpresaElapas" wsdl="${wsdl-EmpresaElapas}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:18666/EmpresaElapas.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EmpresaElapas}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmpresaElapas"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmpresaElapas">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmpresaElapas" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmpresaElapas"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-EmpresaCessa" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmpresaCessa"/>
+        <property name="wsdl-EmpresaCessa" location="xml-resources/web-service-references/EmpresaCessa/wsdl/localhost_18749/EmpresaCessa.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmpresaCessa" destdir="${build.generated.dir}/jax-wsCache/EmpresaCessa" wsdl="${wsdl-EmpresaCessa}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:18749/EmpresaCessa.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EmpresaCessa}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmpresaCessa"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmpresaCessa">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmpresaCessa" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmpresaCessa"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-EmpresaCessa_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1"/>
+        <property name="wsdl-EmpresaCessa_1" location="xml-resources/web-service-references/EmpresaCessa_1/wsdl/localhost_18749/EmpresaCessa.asmx.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1" destdir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1" wsdl="${wsdl-EmpresaCessa_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:18749/EmpresaCessa.asmx?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EmpresaCessa_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmpresaCessa_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EmpresaCessa_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-EmpresaElapas, wsimport-client-EmpresaCessa, wsimport-client-EmpresaCessa_1"/>
+</project>

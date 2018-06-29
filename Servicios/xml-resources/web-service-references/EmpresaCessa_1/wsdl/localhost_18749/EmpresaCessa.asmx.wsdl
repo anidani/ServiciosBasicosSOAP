@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getdeudac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getdeudacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getdeudacResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getdeudacSoapIn">
+    <wsdl:part name="parameters" element="tns:getdeudac" />
+  </wsdl:message>
+  <wsdl:message name="getdeudacSoapOut">
+    <wsdl:part name="parameters" element="tns:getdeudacResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EmpresaCessaSoap">
+    <wsdl:operation name="getdeudac">
+      <wsdl:input message="tns:getdeudacSoapIn" />
+      <wsdl:output message="tns:getdeudacSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EmpresaCessaSoap" type="tns:EmpresaCessaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getdeudac">
+      <soap:operation soapAction="http://tempuri.org/getdeudac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EmpresaCessaSoap12" type="tns:EmpresaCessaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getdeudac">
+      <soap12:operation soapAction="http://tempuri.org/getdeudac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmpresaCessa">
+    <wsdl:port name="EmpresaCessaSoap" binding="tns:EmpresaCessaSoap">
+      <soap:address location="http://localhost:18749/EmpresaCessa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EmpresaCessaSoap12" binding="tns:EmpresaCessaSoap12">
+      <soap12:address location="http://localhost:18749/EmpresaCessa.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
